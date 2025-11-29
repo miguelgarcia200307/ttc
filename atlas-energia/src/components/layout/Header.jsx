@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from '../common/Button';
-import logoGemini from '../../img/logogemini.png';
-import logoApp from '../../img/logo.png';
 
 const Header = () => {
   const location = useLocation();
@@ -29,12 +27,10 @@ const Header = () => {
               to="/" 
               className="flex items-center space-x-2 text-slate-800 hover:text-accent-green transition-colors"
             >
-              <img
-                src={logoApp}
-                alt="Atlas Energético logo"
-                className="w-9 h-9 object-contain rounded-md shadow-sm"
-              />
-              <span className="text-xl font-semibold text-slate-800 tracking-tight hidden md:block">Atlas Energético</span>
+              <div className="w-8 h-8 bg-accent-green rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">AE</span>
+              </div>
+              <span className="text-xl font-bold hidden md:block">Atlas Energético</span>
             </Link>
 
             {/* Navigation */}
@@ -43,20 +39,13 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`${item.name === 'Chat IA' ? 'inline-flex items-center gap-1.5' : ''} text-sm font-medium transition-colors hover:text-accent-green ${
+                  className={`text-sm font-medium transition-colors hover:text-accent-green ${
                     isActive(item.href) 
                       ? 'text-accent-green border-b-2 border-accent-green pb-1' 
                       : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
-                  <span>{item.name}</span>
-                  {item.name === 'Chat IA' && (
-                    <img
-                      src={logoGemini}
-                      alt="Gemini"
-                      className="w-4 h-4 object-contain"
-                    />
-                  )}
+                  {item.name}
                 </Link>
               ))}
             </nav>
@@ -98,12 +87,10 @@ const Header = () => {
             {/* Cabecera del panel */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <img
-                  src={logoApp}
-                  alt="Atlas Energético logo"
-                  className="w-8 h-8 object-contain rounded-md shadow-sm"
-                />
-                <span className="text-lg font-semibold text-slate-800 tracking-tight">
+                <div className="w-9 h-9 bg-accent-green rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">AE</span>
+                </div>
+                <span className="text-lg font-semibold text-slate-800">
                   Atlas Energético
                 </span>
               </div>
@@ -126,24 +113,17 @@ const Header = () => {
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className={`${item.name === 'Chat IA' ? 'inline-flex items-center gap-1.5' : 'block'} rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+                    className={`block rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
                       isActive(item.href)
                         ? 'bg-accent-green/10 text-accent-green border border-accent-green/20'
                         : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
                     }`}
                     onClick={closeMobileMenu}
                   >
-                    <span>{item.name}</span>
-                    {item.name === 'Chat IA' && (
-                      <img
-                        src={logoGemini}
-                        alt="Gemini"
-                        className="w-4 h-4 object-contain"
-                      />
-                    )}
+                    {item.name}
                   </Link>
                 </li>
-              ))}}
+              ))}
             </ul>
 
             {/* Botón "Comenzar" en móvil */}

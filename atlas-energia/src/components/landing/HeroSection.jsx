@@ -44,24 +44,18 @@ const HeroSection = () => {
             </div>
 
             {/* Estadísticas rápidas */}
-            <div className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-md sm:max-w-none">
-              <div className="rounded-2xl bg-main-dark/55 border border-white/10 px-5 py-4 text-center shadow-[0_18px_40px_rgba(15,23,42,0.55)] backdrop-blur-sm">
-                <div className="text-2xl md:text-3xl font-semibold text-accent-green">32</div>
-                <div className="mt-1 text-xs md:text-sm font-medium text-slate-100/90 tracking-wide">
-                  Departamentos
-                </div>
+            <div className="flex flex-wrap gap-8 pt-8">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent-green">32</div>
+                <div className="text-sm text-slate-600">Departamentos</div>
               </div>
-              <div className="rounded-2xl bg-main-dark/55 border border-white/10 px-5 py-4 text-center shadow-[0_18px_40px_rgba(15,23,42,0.55)] backdrop-blur-sm">
-                <div className="text-2xl md:text-3xl font-semibold text-accent-green">1,100+</div>
-                <div className="mt-1 text-xs md:text-sm font-medium text-slate-100/90 tracking-wide">
-                  Municipios
-                </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent-green">1,100+</div>
+                <div className="text-sm text-slate-600">Municipios</div>
               </div>
-              <div className="rounded-2xl bg-main-dark/55 border border-white/10 px-5 py-4 text-center shadow-[0_18px_40px_rgba(15,23,42,0.55)] backdrop-blur-sm">
-                <div className="text-2xl md:text-3xl font-semibold text-accent-green">3</div>
-                <div className="mt-1 text-xs md:text-sm font-medium text-slate-100/90 tracking-wide">
-                  Tipos de Energía
-                </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-accent-green">3</div>
+                <div className="text-sm text-slate-600">Tipos de Energía</div>
               </div>
             </div>
           </div>
